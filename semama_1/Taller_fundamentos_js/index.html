@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhon-Develop</title>
+    <title>Reto 1 - Formulario</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Estilos adicionales para alinear los formularios uno al lado del otro */
+        #reto1-form, #souvenir-form {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <form action="" method="post"></form>
+    <img src="./assets/moon.svg" alt="" class="bg_moon_img move" data-value="1">
+    <div id="formulario">
+        <h2>Iniciar Sesión o Registrarse</h2>
+        <form id="login-registro-form">
+            <label for="correo">Correo electronico</label>
+            <input type="email" id="corre" placeholder="Example@gmail.com" required>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            
+            <button id="submit-btn" type="submit">Iniciar Sesión</button>
+        </form>
+        <p>O</p>
+        <button id="accion-btn">Registrarse</button>
+    </div>
 
-    <script src="../Taller_fundamentos_js/Seccion_1/Taller_1.js"></script>
+    <form id="reto1-form" style="display:none;">
+        <h2>Viaje</h2>
+        <label for="destino">Escoge el país:</label>
+        <input type="text" id="destino" required>
+        
+        <label for="duracion">Escoge los días de tu viaje:</label>
+        <input type="number" id="duracion" inputmode="numeric" required>
+        
+        <label for="presupuesto">Presupuesto inicial:</label>
+        <input type="number" id="presupuesto" required>
+        
+        <button type="submit">Calcular</button>
+    </form>
+    <form id="souvenir-form" style="display: none;">
+        <h2>Souvenir</h2>
+        <label for="nombre">Nombre del souvenir:</label>
+        <input type="text" id="nombre" required>
+        
+        <label for="costo">Costo del souvenir:</label>
+        <input type="number" id="costo" required>
+        
+        <label for="cantidad">Cantidad del souvenir:</label>
+        <input type="number" id="cantidad" required>
+
+        <label for="disponible">¿Disponible?</label>
+        <input type="checkbox" id="disponible">
+        
+        <button type="submit">Agregar Souvenir</button>
+    </form>
+
+    <script src="./Seccion_1/reto1.js"></script>
+    <script src="./Seccion_1/reto11.js"></script>
+    <script src="./Seccion_1/Souvenirs.js"></script>
 </body>
 </html>
